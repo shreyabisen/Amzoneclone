@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="createCookie()">create cookie</button>
+    <button onclick="readCookie()">read cookie</button>
+    <script>
+        function createCookie() {
+            document.cookie = "name=shreya;secure;path=/;expires=Thu,12 dec 2023 12:00:00 UTC";
+            document.cookie = "id=101;secure;path=/;expires=Thu,12 dec 2023 12:00:00 UTC";
+            document.cookie = "name=shreyaaa;secure;path=/;expires=Thu,12 dec 2023 12:00:00 UTC";
+        }
+
+        function readCookie() {
+            console.log(document.cookie);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var promise1 = new Promise((res, rej) => {
+            var a = 10;
+            b = 20;
+            if (a > b) {
+                res("a is greater");
+            }
+            else {
+                rej("b is greter ");
+            }
+        });
+
+        var promise2 = new Promise((res, rej) => {
+            var c = 10;
+            d = 20;
+            if (c > d) {
+                res("c is greater");
+            }
+            else {
+                rej(" d is greter ");
+            }
+        });
+        Promise.all([promise1, promise2])
+            .then((data) => {
+                console.log("all promises resolved");
+            })
+            .catch((error) => {
+                console.log("all promises rejected");
+            });
+
+
+    </script>
+
+
+    <!-- <script> 
+        // var promise = new Promise(function (resolve, reject) {
+
+        //     fetch('https://jsonplaceholder.typicode.com/users')
+        //         .then(response => response.json())
+        //         .then((data) => {
+        //             resolve(data);
+        //         })
+
+        //         .catch((error) => {
+        //             reject(error);
+        //         });
+        // });
+
+        // promise
+        //     .then((data) => {
+        //         console.log(data);
+        //     })
+        //     .catch((err) => {
+        //         console.log(err);
+        //     });
+
+
+        //     var a = 10, b = 20;
+        //     if (a > b) {
+        //         resolve();
+        //     }
+        //     else {
+        //         reject();
+        //     }
+        // });
+        // promise
+        //     .then(() => {
+        //         console.log("then executed");
+        //     })
+        //     .catch(() => {
+        //         console.log("catch executed");
+
+
+
+    </script> -->
+</body>
+
+</html>

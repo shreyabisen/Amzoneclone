@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function something(...allInputs) {
+            console.log(allInputs);
+
+            var sum = 0;
+
+            //    
+            //forIn
+            for (const val in allInputs) {
+                sum = sum + val;
+            }
+            return sum;
+            console.log(something(2, 3, 56, 89));
+        }
+
+        //========================================================================================      
+        //javascriprt m kuch n kuch return hota h
+        //function something(a, b, c = 20) {//arguments pas kiye jate h
+        // return true;
+        // console.log(a, b, c)
+        // console.log("a=>", a);
+        // console.log("b=>", b);
+        // console.log("c=>", c);
+        // return a + b;
+        // }
+        // console.log(something(10, 15));//parameters recive kiye jate h
+
+
+        // //function defination/body
+        // function one() {
+        //     console.log("nornmal function");
+
+
+        // }
+        // //  one();//function call
+
+        // //function defination/body
+        // const two = () => {
+        //     console.log("arrow function");
+        //     one();
+        // };
+        // two();//call
+
+
+    </script>
+</body>
+
+</html>

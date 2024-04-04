@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+            name: "shreya",
+            id: 1234,
+            courses: ["html", "css", "js"],
+            info: {
+                city: "pune",
+                phoneno: 2562562572,
+
+            },
+        };
+        var json = JSON.stringify(obj);//stringify se string m conver krta h
+        console.log(json);
+
+        var str = ' { "name": "shreya", "id": 1234, "courses": ["html", "css", "js"], "info": { "city": "pune", "phoneno": 2562562572 } }'
+        var convertedObj = JSON.parse(str);//string ko object m convert krta h
+        console.log(convertedObj);
+    </script>
+</body>
+
+</html>

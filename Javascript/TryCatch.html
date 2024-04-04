@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        try {
+
+            var a = 10;
+            var b = 20;
+            var c = 30;
+
+            if (a > b) throw "a is greater";
+            if (b > c) throw "b is greater";
+            if (c > a) throw "c is greater";
+
+
+            // function something(params) {
+            //     console.log("something");
+            // }
+
+        } catch (error) {
+            console.log("error=>", error);
+
+        } finally {
+            console.log("finally");      //hr bar execute hota h
+
+        }
+
+    </script>
+</body>
+
+</html>

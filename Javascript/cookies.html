@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Cookies</h1>
+    <button onclick="handleCreateCokkie()">Create Cookie</button>
+    <button onclick="handleReadCokkie()">Read Cookie</button>
+
+    <button onclick="handleChangeCokkie()">Change Cookie value</button>
+    <button onclick="handleDeleteCokkie()">Delete Cookie</button>
+
+
+
+    <script>
+        const handleCreateCokkie = () => {
+            document.cookie = "name=john Doe;secure;expires=thu,12 dec 2023 12:00:00 UTC;path=/javascript/cookies.html";
+            document.cookie = "age=21";
+            document.cookie = "token=dsjkbj6hdgehh8h"
+        };
+        const handleReadCookie = () => {
+            var abc = document.cookie;
+            console.log(abc);
+            console.log(typeof abc);
+        };
+        const handleChangecookie = () => {
+            document.cookie = "name=shreyaaa";
+        };
+        const handleDeleteCokkie = () => {
+            document.cookie = "name=;expires=Thu,01 jan 1970 00:00:00 UTC";
+        };
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainDiv {
+            border: red 2px solid;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul id="ul">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>React JS</li>
+    </ul>
+    <button onclick="myFunction()">change</button>
+
+
+
+
+    <!-- <div class="id" name="class">
+        <h1>this is sss</h1>
+        <h2>this is mee</h2>
+    </div> -->
+
+    <!-- //<button onclick="myFunction()">Change</button>
+   // <h2 name="tags" id="h2Tag">this is h2 tag</h2> -->
+
+    <!-- <button onclick="handleAddOrRemove()">Add/Remove</button> -->
+
+    <!-- <h1 class="h1tag">Hello</h1> -->
+    <!-- <h2 class="h2Tag">This is h2 Tag</h2>
+    <input type="text" name="" id="inpTxt"> -->
+
+    <script>
+
+        function myFunction() {
+            //select first child elemenbt
+            const ulTag = document.getElementById("ul");
+            //create a new text node
+            const liTag = document.createElement("java");
+            //Replace the text node
+            element.replaceChild(newNode, Element.childNodes[0]);
+
+
+        }
+
+        // var h2Tag = document.getElementById("h2Tag");
+
+        // function myFunction() {
+        //     h2Tag.style.color = "red";
+        //     h2Tag.style.fontSize = "50px";
+        //     h2Tag.style.textDecorationLine = "underline";
+        //     h2Tag.style.textDecoration = "blue"
+
+        //     h2Tag.style.textAlign = "center";
+        //     h2Tag.style.border = "5px solid green";
+        //     h2Tag.style.animationDirection = h2Tag.style.animationDirection == "reverse" ? "normal" : "reverse";
+        // }
+
+
+
+
+        // var h1Tag = document.getElementById("h1Tag");
+        // // console.log("h1Tag=>", h1Tag);
+
+        // var h2Tag = document.getElementById("h2Tag");
+        // console.log("h2Tag=>", h2Tag);
+
+        // var tags = document.getElementsByTagName("tags");
+        // console.log("tags=>", tags);
+
+        // var pTags = document.getElementsByTagName("p");
+        // console.log("pTags=>", pTags);
+
+
+        // const handleAddOrRemove = () => {
+        //     var mainDiv = document.getElementById("mainDiv");
+        //     var h1Tag = document.getElementById("h1Tag");
+        //     mainDiv.removeChild(h1Tag);
+        // }
+
+        ////Replaceeee
+        //-------------------------------------------------------------------------------
+
+
+
+
+
+    </script>
+</body>
+
+</html>

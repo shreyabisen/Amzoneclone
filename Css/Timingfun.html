@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 20px;
+            background-color: hsl(232, 79%, 35%);
+            width: 150px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 10px;
+
+            position:relative;
+            animation:animationRules;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            
+        }
+        .linear{
+            animation-timing-function: linear;
+        }
+        .Ease{
+            animation-timing-function: ease;
+        }
+        .Ease-in{
+            animation-timing-function: ease-in;
+        }
+        .Ease-out{
+            animation-timing-function: ease-out;
+        }
+        .Ease-in-out{
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes animationRules{
+            from{
+                left:0;
+                /* transform: rotate(0deg); */
+
+            }
+            to{
+                left: 400px;
+                /* transform: rotate(360deg); */
+            }
+
+        } 
+    </style>
+</head>
+<body>
+   <div class="maindiv">
+    <h1 class="Linear"> Linear</h1>
+    <h1 class="Ease">Ease</h1>
+    <h1 class="Ease-in">Ease-in</h1>
+    <h1 class="Ease-out">Ease-out</h1>
+    <h1 class="Ease-in-out">Ease-in-out</h1>
+   </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="handleSetItem()">setItem</button>
+    <button onclick="handleGetItem()">getItem</button>
+    <button onclick="handleRemveItem()">removeItem</button>
+    <script>
+        // //loca; storage
+        // const handleSetItem = () => {
+        //     localStorage.setItem("name", "shreya");
+
+        // };
+        // const handleGetItem = () => {
+        //     var name = localStorage.getItem("name");
+        //     console.log("name=>", name);
+        // };
+        // const handleRemveItem = () => {
+        //     localStorage.removeItem("name");
+        // };
+        //session storage
+
+        const handleSetItem = () => {
+            sessionStorage.setItem("name", "shreya");
+
+        };
+        const handleGetItem = () => {
+            var name = sessionStorage.getItem("name");
+            console.log("name=>", name);
+        };
+        const handleRemveItem = () => {
+            sessionStorage.removeItem("name");
+        };
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let student = {
+            stringValue: "john",
+            numValue: 30,
+            boolValue: false,
+            arrValue: ["html", "css", "ja"],
+            nullValue: null,
+        };
+
+        consle.log(student);
+        console.log(typeof student);
+
+
+        let json = JSON.stringify(student);
+        console.log(json);
+        console.log(typeof json);
+
+
+
+        let obj = json.parse(json);
+        console.log(obj);
+        console.log(typeof obj);
+
+
+
+    </script>
+</body>
+
+</html>

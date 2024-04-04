@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=> initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        // class employee {
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+
+        //     display() {
+        //         console.log(this.name, this.age);
+        //     }
+        // }
+        // var emp = new employee("shreya", 20);
+        // emp.display();
+
+        //-===========================================================================================
+
+        class car {
+            constructor(brand) {
+                this.carname = brand;
+            }
+            present() {
+                return "I have a " + this.carname;
+            }
+        }
+        class maodel extends car {
+            constructor(brand, mod) {
+                super(brand);
+                this.model = mod;
+            }
+            show() {
+                return this.present() + ",it is a " + this.model;
+            }
+        }
+        let myCar = new maodel("ford", "Mustang");
+        document.getElementById("demo").innerHTML = myCar.show();
+
+    </script>
+</body>
+
+</html>

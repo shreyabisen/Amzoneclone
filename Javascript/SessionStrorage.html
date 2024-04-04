@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Session Storage</h1>
+    <button onclick="handleSet()">setItem</button>
+    <button onclick="handleGet()">getItem</button>
+    <button onclick="handleSet()">removeItem</button>
+
+    <script>
+        const handleSet = () => {
+            sessionStorage.setItem("name", "shreya");
+
+        };
+        const handleGet = () => {
+            var abc = sessionStorage.getItem("name");
+            console.log(abc);
+
+        };
+        const handleRemove = () => {
+            sessionStorage.removeItem("name");
+        };
+
+
+
+    </script>
+</body>
+
+</html>

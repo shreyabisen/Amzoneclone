@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Something (setTimeout/setInterval)</h1>
+    <button onclick="handlsetTimeout()">Trigger setTimeout</button>
+    <button onclick="handlsetInterval()">Trigger setInterval</button>
+    <script>
+        const handleInterval = () => {
+            setInterval(() => {
+                console.log("callback function executed", i);
+                i++;
+            },
+
+                2000);
+
+            setTimeout(() => {
+                clearInterval(interval);//vo variable jo interval m se set kiya h
+                console.log("execution stopped after 10 seconds");
+
+            },
+                2000);
+        };
+
+        // const handlsetTimeout = () => {
+        //     setTimeout(() => {
+        //         console.log("callback function 1 executed");
+        //     },
+        //         5000);
+        //     setTimeout(() => {
+        //         console.log("callback function 1 executed");
+        //     },
+        //         5000);
+        //     setTimeout(() => {
+        //         console.log("callback function 1 executed");
+        //     },
+        //         5000);
+        // };
+    </script>
+</body>
+
+</html>

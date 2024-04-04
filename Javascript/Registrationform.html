@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: lightslategrey;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+
+            border: 2px solid aqua;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            margin: auto;
+        }
+
+        .errMsg {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="">
+            <input type="text" placeholder="Name" id="inpTxtName" onkeypress="removeErrMsgName()">
+            <p class="errMsg" id="errName"></p> <br> <br>
+
+            <input type="email" placeholder="Email Id" id="inpTxtEmail" onkeypress="removeErrMsgEmail()">
+            <p class="errMsg" id="errEmail"></p><br><br>
+
+            <div class="gender" onclick="removeErrMsgGender()">
+                <input type="radio" name="gender" value="Male">
+                <label for="Male">Male</label>
+
+                <input type="radio" name="gender" value="Female">
+                <label for="Female">female</label>
+
+                <input type="radio" name="gender" value="Others">
+                <label for="Others">Others</label>
+                <p class="errMsg" id="errGender"></p>
+            </div><br>
+
+            <div class="courses" onclick="removeErrMsgCourses()">
+                <input type="checkbox" name="HTML" id="chkHtml">
+                <label for="HTML">HTML</label>
+
+                <input type="checkbox" name="CSS" id="chkCss">
+                <label for="CSS">CSS</label>
+
+                <input type="checkbox" name="JAVASCRIPT" id="chkJavascript">
+                <label for="JAVASCRIPT">JAVASCRIPT</label>
+                <p class="errMsg" id="errCourses"> </p>
+            </div><br>
+
+
+            <select name="" id="states">
+                <option value="">Select State</option>
+                <option value="MAHARASHTRA">MAHARASHTRA</option>
+                <option value="GOA">GOA</option>
+                <option value="GUJRAT">GUJRAT</option>
+                <option value="KERALA">KERALA</option>
+                <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+            </select><br><br>
+
+            <input type="password" placeholder="Password" id="inpTxtPwd" onkeypress="removeErrMsgPwd()">
+            <p class="errMsg" id="errPwd"></p><br><br>
+
+            <input type="password" placeholder="Confirm Password" id="inpTxtCnfPwd" onkeypress="removeErrMsgCnfPwd()">
+            <p class="errMsg" id="errConfirmPwd"></p><br><br>
+
+            <!-- <input type="submit" onclick="handleElement()"  value="Register"> -->
+            <input type="button" onclick="handleElement()" value="Register">
+        </form>
+        <script>
+            const handleElement = () => {
+                //text inputs (type = 'text,'password','email','number')
+                const inpTxtName = document.getElementById("inpTxtName").value;
+                const inpTxtEmail = document.getElementById("inpTxtEmail").value;
+                const inpTxtPwd = document.getElementById("inpTxtPwd").value;
+                const inpTxtCnfPwd = document.getElementById("inpTxtCnfPwd").value;
+
+                console.log(inpTxtName);
+                console.log(inpTxtEmail);
+                console.log(inpTxtPwd);
+                console.log(inpTxtCnfPwd);
+
+                //dropdown list (Select Tag)
+                const selectedState = document.getElementById("states").value;
+                console.log(selectedState);
+
+                //checkboxes (type = 'checkbox')
+                const chkHtml = document.getElementById("chkHtml");
+                const chkCss = document.getElementById("chkCss");
+                const chkJavascript = document.getElementById("chkJavascript");
+
+                const selectedCourses = [];  //
+                if (chkHtml.checked) {
+                    selectedCourses.push("HTML");
+                }
+                if (chkCss.checked) {
+                    selectedCourses.push("CSS");
+                }
+                if (chkJavascript.checked) {
+                    selectedCourses.push("JAVASCRIPT");
+                }
+                console.log(selectedCourses);
+
+                var radioGender = document.getElementsByName("gender");
+                var selectGender = "";
+                radioGender.forEach((val, ind) => {
+                    if (val.checked) {
+                        selectGender = val.value;
+                    }
+                });
+                console.log(selectGender);
+                if (inpTxtName && inpTxtEmail && inpTxtPwd && inpTxtCnfPwd && selectedCourses.length > 0 && selectGender) {
+                    if (inpTxtPwd === inpTxtCnfPwd) {
+                        console.log("success");
+                    } else {
+                        const errConfirmPwd = document.getElementById("errConfirmPwd");
+                        errConfirmPwd.innerHTML = 'Password are not matching'
+                    }
+                } else {
+                    if (!inpTxtName) {
+                        const errName = document.getElementById("errName");
+                        errName.innerHTML = 'Please enter your Name'
+                    }
+                    if (!inpTxtEmail) {
+                        const errEmail = document.getElementById("errEmail");
+                        errEmail.innerHTML = 'Please enter your Email'
+                    }
+                    if (!inpTxtPwd) {
+                        const errPwd = document.getElementById("errPwd");
+                        errPwd.innerHTML = 'Please enter your Password'
+                    }
+                    if (!inpTxtCnfPwd) {
+                        const errConfirmPwd = document.getElementById("errConfirmPwd");
+                        errConfirmPwd.innerHTML = 'Please enter your Comfirm Password'
+                    }
+                    if (!selectedCourses.length > 0) {
+                        const errCourses = document.getElementById("errCourses");
+                        errCourses.innerHTML = 'Please select atleast one course'
+                    }
+                    if (!selectGender) {
+                        const errGender = document.getElementById("errGender");
+                        errGender.innerHTML = 'Please select Gender'
+                    }
+
+                }
+
+            };
+
+            const removeErrMsgName = () => {
+                const errName = document.getElementById("errName");
+                errName.innerHTML = "";
+            }
+
+            const removeErrMsgEmail = () => {
+                const errEmail = document.getElementById("errEmail");
+                errEmail.innerHTML = "";
+            }
+            const removeErrMsgPwd = () => {
+                const errPwd = document.getElementById("errPwd");
+                errPwd.innerHTML = "";
+            }
+            const removeErrMsgCnfPwd = () => {
+                const errConfirmPwd = document.getElementById("errConfirmPwd");
+                errConfirmPwd.innerHTML = "";
+            }
+            const removeErrMsgCourses = () => {
+                const errCourses = document.getElementById("errCourses");
+                errCourses.innerHTML = "";
+            }
+            const removeErrMsgGender = () => {
+                const errGender = document.getElementById("errGender");
+                errGender.innerHTML = "";
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

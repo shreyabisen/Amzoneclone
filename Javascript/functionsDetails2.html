@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+
+        function one() {
+            function two() {
+                function three() {
+                    var name = "shreyaa";
+                    return name;
+
+
+
+
+                }
+                four(three());
+
+
+            }
+            two();
+
+        }
+        one();
+
+        function four(someone) {
+
+            console.log(someone);
+        }
+
+
+        ///////////////////////////////////////////////////////////////////////////////////
+        //closure jb tk refer nh hote jb tk call nh hote kb execute nh honga jb tk uska parent jb tk
+        //call nh hote usk parent function kisi dusre variable ko assign nh hota
+        // if parent function exit ho jaye phie bh  uske variable ka current value ka access rkhta h
+        // function parentFunction(superhero) {
+        //     let i = 0;
+        //     return () => {
+        //         console.log('${superhero} is ${i++}th hero');
+        //         console.log("--------------------");
+        //     }
+        // }
+
+        // var spiderman = parentFunction("spiderman");
+        // var ironman = parentFunction("ironman");
+
+        // spiderman();
+        // spiderman();
+        // spiderman();
+        // ironman();
+        // spiderman();
+
+
+    </script>
+</body>
+
+</html>

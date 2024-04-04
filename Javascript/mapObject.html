@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var map1 = new Map();
+        // map1.set("name", "shreya");
+        // map1.set("id", 1234);
+        // map1.set("city", "pune");
+        // console.log(map1);
+
+        var map2 = new Map([["name", "shreya"], ["id", 1234], ["city", "pune"]]);
+        console.log(map2);
+
+        console.log(map2.get("name"));
+        console.log("map2.keys()=>", map2.keys());
+        console.log("map2.values()=>", map2.values());
+
+        map2.delete("name");
+        console.log(map2);
+
+        map2.clear();
+        console.log(map2);
+
+        map2.set("name", "shreya");
+        map2.set("id", 1234);
+        map2.set("city", "pune");
+        console.log(map2);
+
+        map2.forEach((value, key) => {
+            console.log(key, "=>", value);
+        });
+
+
+
+    </script>
+</body>
+
+</html>

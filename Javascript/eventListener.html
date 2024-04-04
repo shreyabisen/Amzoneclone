@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Add EvenrLister -->
+
+    <!-- elemnt.addeventlistner("listener ka type",=>(callbackfunction)) -->
+    <h1 id="h1Tag">Shreyaaa</h1>
+
+    <script>
+        const h1Tag = document.getElementById("h1Tag");
+
+        h1Tag.addEventListener("click", () => {
+            h1Tag.style.color = "red";
+            console.log("click");
+        });
+    </script>
+
+    <!-- <input type="text" name="" id="" onkeydown="handleKeyDown()" onkeyup="handleKeyUp()" onkeypress="handleKeyPress()"> -->
+
+    <!-- <script>
+        function handleKeyDown() {
+            console.log("key down");
+        }
+        //key press krke rkhne k bad
+        function handleKeyUp() {
+            console.log("key up");
+        }
+        //   jb character input hoga toh`onkeypress hoga
+        function handleKeyPress() {
+            console.log("key pressed");
+        }
+    </script> -->
+
+
+    <!-- <button onclick="handleSingleClick()"> single Click</button>
+
+    <script>
+        function handleSingleClick() {
+            console.log("single click");
+        }
+    </script>
+
+    <button ondblclick="handleDoubleClick()">Double click</button>
+
+    <script>
+        function handleDoubleClick() {
+            console.log("double click");
+
+        }
+    </script> -->
+
+
+</body>
+
+</html>

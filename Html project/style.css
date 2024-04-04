@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.protfolio-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+
+}
+
+.navlist {
+    display: flex;
+    gap: 2.3rem;
+
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+
+.left-container,
+.right-container {
+    height: 100vh;
+    display: flex;
+}
+
+.left-container {
+    background: #262525;
+    width: 70%;
+    padding-left: 3rem;
+}
+
+.right-container {
+    background: linear-gradient(-45deg, #3877ff, #262525 70%);
+    width: 30%;
+}
+
+.icons .fa-brands {
+    color: #bbb;
+    font-size: 1.7rem;
+
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.content {
+    margin-left: 4rem;
+}
+
+.content .intro {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.content .intro span {
+    color: #5DB9EE;
+}
+
+.content h2 {
+    font-size: 4rem;
+    color: #5DB9EE;
+}
+
+.detail {
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn-container button {
+    border: 0.5rem solid #5DB9EE;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+
+
+
+}
+
+button:nth-child(1) {
+    background: hsl(202, 98%, 49%);
+    color: #262525;
+
+
+}
+
+button:nth-child(2) {
+    background: #fff;
+    color: hsl(202, 89%, 49%);
+
+}
+
+button:nth-child(1):hover {
+    background: transparent;
+    color: hsl(202, 89%, 49%);
+}
+
+button:nth-child(2):hover {
+    background: hsl(202, 98%, 49%);
+    color: #262525;
+}
+
+.icons.fa-brands {
+    cursor: pointer;
+    background: linear-gradient(#fff, #3877ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.design .circle {
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.circle:nth-child(1) {
+    background: linear-gradient(90deg, transparent 50%, #262525 50%);
+    width: 38rem;
+
+}
+
+.circle:nth-child(2) {
+    width: 30rem;
+    background-image: url(./image/e1da177d-94f4-42ab-94f2-a6a0feb4e8ef.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 2rem solid white;
+
+    box-shadow: 0 0 5rem #fff,
+        inset 0 0 1rem #fff,
+        0 0 4rem #3877ff,
+        inset 0 0 4rem hwb(221 3% 10%);
+}
+
+.navlist li a::after,
+.navlist .active::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -.5rem;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .5s;
+}
+
+.navlist li a:hover::after,
+.active::after {
+    transform: scaleX(1);
+    transition: .5s;
+    transform-origin: left;
+}

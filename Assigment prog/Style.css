@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+}
+
+.content>img {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid gray;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 3px;
+
+}
+
+.content:hover {
+    margin-top: auto;
+    filter: brightness(0);
+    transform: matrix3d();
+
+
+}

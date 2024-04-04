@@ -1,0 +1,63 @@
+body {
+    background: url(https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg);
+    background-size: 1250px 450px;
+    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
+
+
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.first {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid black;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.text {
+    padding: 9px;
+    margin: 20px;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    background-color: black;
+}
+
+nav .btn {
+    display: flex;
+
+}
+
+.btn.eng {
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-size: 19px;
+    border: 2px solid white;
+    margin-right: 33px;
+}
+
+.btn.sign {
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    font-size: 19px;
+    border-radius: 3px;
+    border: none;
+    border: 2px solid white;
+}
+
+.btn.eng {
+    margin-inline: 20px;
+}
